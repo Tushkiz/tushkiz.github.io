@@ -1,2 +1,125 @@
-tushar47.github.io
+<!DOCTYPE html>
+<html lang="en">
 
+	<head>
+		<meta charset="utf-8" />
+		 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+         More info: h5bp.com/i/378 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title>Tushar Sonawane</title>
+		
+		<meta name="description" content="Tushar Sonawane (Testing Purpose Domain)" />
+		<meta name="author" content="Tushar Sonawane">
+		<meta name="viewport" content="width=device-width">
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+		
+		<!--[if lt IE 9]>
+			<script src="js/vendor/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lte IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	
+	<div id="top-bar"></div>
+	<div class="grid grid-pad">
+		<div class="col-4-12">
+			<div class="content">
+				<section id="sidebar">
+				<figure>
+					<img id="photo" src="img/tushar.jpg" />
+				</figure>
+				<nav>
+					<ul>		
+						<li class="github">
+							<a href="http://www.github.com/Tushar47" target="_blank"><span>Github</span></a>
+						</li>
+						
+						<li class="twitter">
+							<a href="http://www.twitter.com/tushkiz" target="_blank"><span>Twitter</span></a>
+						</li>
+						
+						<li class="linkedin">
+							<a href="http://www.linkedin.com/in/tushar47" target="_blank"><span>LinkedIn</span></a>
+						</li>
+				
+						<li class="facebook">
+							<a href="http://www.facebook.com/tushar47" target="_blank"><span>Facebook</span></a>
+						</li>
+									
+						<li class="gmail">
+							<a href="mailto:tusharlsonawane@gmail.com?subject='Hello Tushar'" target="_blank"><span>Mail</span></a>
+						</li>
+					</ul>
+				</nav>
+				<section id="activities">
+					<p>For <strong>hiring</strong> just <a href="mailto:tusharlsonawane@gmail.com?subject='Hello Tushar'" target="_blank">drop me a line</a> <span class="emoticons">:)</span></p>
+				</section>
+				</section>
+			</div>
+		</div>
+		<div class="col-8-12">
+			<div class="content">
+				<section id="main">
+					<h1>Tushar Sonawane {&hellip;}</h1>
+					
+					
+                    <section id="bio">
+					<h2>About ME</h2>
+					<p>
+						I am a developer-slash-designer hybrid, gets easily excited by web development and design.
+						Also most of my time is spent critisizing upon product's design and implementation for its usability.
+					</p>
+                    <p><em>P.S. I am really fascinated by anything in the areas of web, mobile, ui/ux and design.</em></p>
+					</section>
+                    
+                    <section id="credentials">
+					<h2>My CREDS</h2>
+					<p>
+						I am a B. Tech Graduate in Computer Science,
+						from the esteemed Walchand College of Engineering,
+						at Sangli, Maharashtra, India.
+					</p>
+					</section>
+                    
+					<section id="tweet-container">
+					<h2>Latest Tweet</h2>
+					<p>Cannot fetch tweet at this moment <span class="emoticons">:(</span></p>
+				    </section>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	
+	<!-- Scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+        <script type="text/javascript">
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='js/vendor/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+	<script type="text/javascript">
+			var twitterHandler = "Tushkiz";
+
+			$.getJSON('http://search.twitter.com/search.json?callback=?&rpp=10&q=from:' + twitterHandler, function(data) {
+				$tweet = data.results[0].text.split(" ");
+				for(var i in $tweet) {
+					if($tweet[i].slice(0,4) == "http") {
+						$tweet[i] = '(<a  href='+ $tweet[i] +' target="_blank">' + $tweet[i].split("://")[1] + '</a>)';
+					}
+				}
+				$('#tweet-container').children("p").html('&ldquo;&nbsp;' + $tweet.join(" ") + '&nbsp;&rdquo;');
+			});
+            
+		</script>
+	</body>
+
+</html>

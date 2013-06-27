@@ -1,0 +1,48 @@
+{
+	"completed_in": 0.022,
+	"max_id": 308916055051481088,
+	"max_id_str": "308916055051481088",
+	"page": 1,
+	"query": "from%3Atushkiz",
+	"refresh_url": "?since_id=308916055051481088&q=from%3Atushkiz",
+	"results": [
+		{
+			"created_at": "Tue, 05 Mar 2013 12:25:01 +0000",
+			"from_user": "Tushkiz",
+			"from_user_id": 31457410,
+			"from_user_id_str": "31457410",
+			"from_user_name": "Tushar Sonawane",
+			"geo": null,
+			"id": 308916055051481088,
+			"id_str": "308916055051481088",
+			"iso_language_code": "en",
+			"metadata": {
+				"result_type": "recent"
+			},
+			"profile_image_url": "http:\/\/a0.twimg.com\/profile_images\/2385442472\/g6wajhu1epgxdl0edxew_normal.jpeg",
+			"profile_image_url_https": "https:\/\/si0.twimg.com\/profile_images\/2385442472\/g6wajhu1epgxdl0edxew_normal.jpeg",
+			"source": "&lt;a href=&quot;http:\/\/twitter.com\/download\/android&quot;&gt;Twitter for Android&lt;\/a&gt;",
+			"text": "RT @netmag: Make your website printable with CSS http:\/\/t.co\/8NL2AKR0gO"
+		}, {
+			"created_at": "Mon, 04 Mar 2013 14:10:51 +0000",
+			"from_user": "Tushkiz",
+			"from_user_id": 31457410,
+			"from_user_id_str": "31457410",
+			"from_user_name": "Tushar Sonawane",
+			"geo": null,
+			"id": 308580299619586048,
+			"id_str": "308580299619586048",
+			"iso_language_code": "en",
+			"metadata": {
+				"result_type": "recent"
+			},
+			"profile_image_url": "http:\/\/a0.twimg.com\/profile_images\/2385442472\/g6wajhu1epgxdl0edxew_normal.jpeg",
+			"profile_image_url_https": "https:\/\/si0.twimg.com\/profile_images\/2385442472\/g6wajhu1epgxdl0edxew_normal.jpeg",
+			"source": "&lt;a href=&quot;http:\/\/twitter.com\/download\/android&quot;&gt;Twitter for Android&lt;\/a&gt;",
+			"text": "RT @netmag: Hacking the brain: @RichardShepherd on creating delightful sites and apps http:\/\/t.co\/Obi3kumjVx"
+		}
+	],
+	"results_per_page": 10,
+	"since_id": 0,
+	"since_id_str": "0"
+}
