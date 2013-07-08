@@ -205,6 +205,35 @@ span.emoticons {
 	margin-bottom: 2em;
 }
 
+#skills span {
+    top: -22px;
+    left: 2%;
+    position: relative;
+    font-size: 1.8em;
+    font-weight: bolder;
+    font-family: monospace;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2.5em;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #BEEDF3;
+}
+
+progress::-webkit-progress-value {
+    background-color: #59D3FE;
+}
+
+progress::-moz-progress-bar {
+    background-color: #59D3FE;
+}
+
+
 /* Media Queries */
 
 @media handheld, only screen and (max-width: 767px) {
@@ -231,10 +260,13 @@ span.emoticons {
 		padding-right: 0px;
 	}
 	nav ul li:hover a span { display: none; }
+    
 }
 
 @media handheld, only screen and (max-width: 480px) {
 
 	h1 { font-size: 2.5em; text-align: left; }
 	nav ul li:hover a span { display: none; }
+    
+    
 }
