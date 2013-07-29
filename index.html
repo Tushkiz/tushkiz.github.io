@@ -9,7 +9,7 @@
 		
 		<title>Tushar Sonawane</title>
 		
-		<meta name="description" content="Tushar Sonawane (Testing Purpose Domain)" />
+		<meta name="description" content="Portfolio of Tushar Sonawane" />
 		<meta name="author" content="Tushar Sonawane">
 		<meta name="viewport" content="width=device-width">
 		
@@ -60,7 +60,7 @@
 					</ul>
 				</nav>
 				<section id="activities">
-					<p>Got any<strong> crazy idea</strong>! <a href="mailto:tusharlsonawane@gmail.com?subject='Hi Tushar'" target="_blank">lets get buzy</a> <span class="emoticons">:)</span></p>
+					<p>Got any<strong> crazy idea</strong>! <a href="mailto:tusharlsonawane@gmail.com?subject='Hi Tushar'" target="_blank">lets talk</a> <span class="emoticons">:)</span></p>
 				</section>
 				</section>
 			</div>
@@ -75,24 +75,21 @@
 					<h2>About ME</h2>
 					<p>
 						I am a full stack engineer, spend most of my time source-diving and critisizing upon product's design and implementation for its usability.
-						I am really fascinated by anything in the areas of web, mobile, ui/ux and design.
+						I am fascinated by anything in the areas of web, mobile, ui/ux and design.
 					</p>
-                    <p><em>P.S. thy console is always open for your site!</em></p>
+                    <p><em>P.S. thy console is always open for you!</em></p>
 					</section>
                     
                     <section id="skills">
-					<h2>Skills</h2>
-					<progress value="8" max="10"></progress><span>JavaScript/jQuery</span>
-					<progress value="7" max="10"></progress><span>HTML/CSS</span>
-					<progress value="6" max="10"></progress><span>NodeJS</span>
-					<progress value="7" max="10"></progress><span>Java/PHP</span>
-					<progress value="6" max="10"></progress><span>MySQL</span>
+					<h2>Nerdy SKILLS</h2>
+					<progress value="80" max="100"></progress><span>JavaScript/jQuery</span>
+					<progress value="70" max="100"></progress><span>HTML5/CSS3</span>
+					<progress value="60" max="100"></progress><span>NodeJS</span>
+					<progress value="70" max="100"></progress><span>Java/PHP</span>
+					<progress value="60" max="100"></progress><span>MySQL</span>
+					<progress value="80" max="100"></progress><span>Photoshop</span>
 					</section>
-                    
-					<section id="tweet-container">
-					<h2>Latest Tweet</h2>
-					<p>Cannot fetch tweet at this moment <span class="emoticons">:(</span></p>
-				    </section>
+
 				</section>
 			</div>
 		</div>
@@ -108,19 +105,13 @@
             }
         </script>
 	<script type="text/javascript">
-			var twitterHandler = "Tushkiz";
-
-			$.getJSON('http://search.twitter.com/search.json?callback=?&rpp=10&q=from:' + twitterHandler, function(data) {
-				$tweet = data.results[0].text.split(" ");
-				for(var i in $tweet) {
-					if($tweet[i].slice(0,4) == "http") {
-						$tweet[i] = '(<a  href='+ $tweet[i] +' target="_blank">' + $tweet[i].split("://")[1] + '</a>)';
-					}
-				}
-				$('#tweet-container').children("p").html('&ldquo;&nbsp;' + $tweet.join(" ") + '&nbsp;&rdquo;');
+		$(document).ready(function() {
+			$('progress').each(function() {
+				var max = $(this).val();
+				$(this).val(0).animate({ value: max }, { duration: 2000 });
 			});
-            
-		</script>
+		});
+	</script>
 	</body>
 
 </html>
