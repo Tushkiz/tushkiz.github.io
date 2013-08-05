@@ -1,0 +1,281 @@
+/* Main Styles */
+
+*, *:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+::-moz-selection {
+	background-color: #4A4A4A;
+	color: #EEE;
+}
+
+::selection {
+	background-color: #4A4A4A;
+	color: #EEE;
+}
+
+body {
+font-family: sans-serif;
+background-color: #EAEAEA;
+font-size: 62.5%;
+}
+a {
+text-decoration: none;
+display: block;
+}
+a:hover,
+a:active,
+a:focus,
+input, select {
+outline: 0;
+}
+
+
+
+/* new card style */
+.card {
+background-color: #FFFFFF;
+width: 400px;
+border-radius: 6px;
+box-shadow: -1px 1px 1px #b0b0b0;
+margin: 20px 0 0 20px;
+float: left;
+}
+.card:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* header styles */
+.header {
+border-radius: 6px;
+background-color: #FFF;
+color: #222;
+overflow: hidden;
+}
+.header h4 {
+padding: 10px 0 10px 15px;
+font-size: 1.6em;
+letter-spacing: 1px;
+float: left;
+}
+.header .controls {
+font-size: 1.6em;
+float: right;
+margin-right: 6px;
+}
+.controls li {
+display: inline-block;
+}
+.controls li a {
+color: #222;
+border-top: 3px solid transparent;
+padding: 7px 10px;
+}
+
+.controls li a:hover {
+border-top: 3px solid #F45E5F;
+}
+
+
+/* info styles */
+.info {
+border-top: 1px solid #eee;
+}
+
+.hidden {
+	display: none;
+}
+
+.info img {
+width: 100px;
+margin: 15px;
+border-radius: 5px;
+box-shadow: -1px 1px 1px #ccc;
+float: left;
+}
+
+.info a, .info address {
+font-family: sans-serif;
+color: #222;
+font-size: 1.4em;
+padding: 15px 10px 0 0;
+}
+
+
+
+/* top bar */
+
+header:after {
+	content:"";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+	font-size:0;
+	line-height:0;
+}
+
+.top-bar {
+	background-color: #4A4A4A;
+	color: #EEE;
+}
+
+.top-bar h1 {
+	float: left;
+	padding: 16px;
+	border-right: 1px solid #777;
+}
+.top-bar label {
+	display: block;
+	float: left;
+	font-size: 20px;
+	padding: 15px;
+	margin-left: 50px;
+}
+.top-bar .filter {
+	width: 180px;
+	height: 56px;
+	overflow: hidden;
+	border-radius: 3px;
+	float: left;
+	padding: 10px 0 0 0;
+}
+
+.top-bar .filter select {
+	background: #fff;
+	width: 150px;
+	padding-left: 5px;
+	margin-left: 10px;
+	font-size: 16px;
+	color: #222;
+	border: 0;
+	border-radius: 3px;
+	height: 36px;
+	-webkit-appearance: none;
+}
+.top-bar .search {
+	float: left;
+	/* margin-left: 50px; */
+	margin: 10px 0 12px 20px;
+}
+
+.btn {
+	font-size: 16.996px;
+	line-height: 16px;
+	padding: 9px 16px;
+	background-color: #7bf;
+	color: #222;
+	border: 0;
+	border-radius: 3px;
+}
+
+.top-bar a {
+	float: left;
+	/* margin-left: 50px; */
+	margin: 10px 0 12px 30px;
+}
+
+.btn:hover {
+	background-color: #8cf;
+}
+
+
+/* New Contact Form */
+.form-container {
+clear: both;
+border-top: 1px solid #777;
+}
+
+input {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px;
+  vertical-align: middle;
+  border: 0;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+#addContact {
+padding-top: 30px;
+font-size: 16px;
+width: 500px;
+display: none;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 10px;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.form-horizontal .control-group:after {
+  clear: both;
+}
+
+.form-horizontal .control-label {
+  float: left;
+  width: 100px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.form-horizontal .input-controls {
+  margin-left: 150px;
+}
+
+
+/* Edit Contact Form */
+.modal {
+	width: 500px;
+	padding: 20px;
+	background-color: #4a4a4a;
+	color: #eee;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	height: auto;
+	z-index: 2000;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 1;
+    background: rgba(255,255,255,0.8);
+    transition: all 0.3s;
+    display: none;
+}
+
+.modal select {
+	background: #fff;
+	width: 150px;
+	font-size: 16px;
+	color: #222;
+	border: 0;
+	border-radius: 3px;
+	height: 36px;
+	-webkit-appearance: none;
+}

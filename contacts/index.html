@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Contacts Manager</title>
+		
+		<!-- Scripts -->
+		<script src="scripts/vendor/jquery.min.js"> </script>
+		<script src="scripts/vendor/underscore.min.js"> </script>
+
+		<script id="contactCardTemplate" type="text/template">
+		<header class="header">
+			<h4><%= name %></h4>
+			<ul class="controls">
+				<li class="hide"><a href="#">-</a></li>
+				<li class="edit"><a href="#">#</a></li>
+				<li class="delete"><a href="#">x</a></li>
+			</ul>
+		</header>
+		<div class="info">
+			<img src="<%= photo %>" alt="<%= name %>" class="photo-id">
+			<a href="tel:<%= tel %>"><%= tel %></a>
+			<a href="mailto:<%= email %>" target="_blank"><%= email %></a>
+			<address class="address">
+				<%= address%>
+			</address>
+		</div>
+		</script>
+
+		<script id="contactEditTemplate" type="text/template">
+		<div class="modal-overlay"></div>
+		<div class="modal">
+		<form class="form-horizontal" id="editContact">
+	  
+				<div class="control-group">
+			    <label class="control-label" for="photo">Photo</label>
+			    <div class="input-controls">
+			      <input type="file" id="photo" value="<%= photo %>" placeholder="photo">
+			    </div>
+				</div>
+			  <div class="control-group">
+			    <label class="control-label" for="name">Name</label>
+			    <div class="input-controls">
+			      <input id="name" value="<%= name %>" placeholder="name">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="type">Type</label>
+			    <div id="typeControl" class="input-controls">
+			      <input id="type" type="hidden" value="<%= type %>"placeholder="type">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="address">Address</label>
+			    <div class="input-controls">
+			      <input id="address" value="<%= address %>" placeholder="Address">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="tel">Phone</label>
+			    <div class="input-controls">
+			      <input id="tel" value="<%= tel %>" placeholder="telephone Number">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="email">Email</label>
+			    <div class="input-controls">
+			      <input id="email" value="<%= email %>" placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <div class="input-controls">
+			      <button class="btn save">Save</button>
+    				<button class="btn cancel">Cancel</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	</head>
+	<body>
+		<div class="contacts-container">
+			<header class="top-bar">
+				<h1>Contacts Manager</h1>
+				<label>Show Me</label>
+				<div class="filter"></div>
+				<input class="search" placeholder="Search"/>
+				<a class="btn" id="showForm" href="#">New</a>
+				
+
+				<div class="form-container">
+					<form class="form-horizontal" id="addContact">
+					  <div class="control-group">
+					    <label class="control-label" for="photo">Photo</label>
+					    <div class="input-controls">
+					      <input type="file" id="photo" placeholder="photo">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="name">Name</label>
+					    <div class="input-controls">
+					      <input id="name" placeholder="name">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="type">Type</label>
+					    <div class="input-controls">
+					      <input id="type" placeholder="type">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="address">Address</label>
+					    <div class="input-controls">
+					      <input id="address" placeholder="Address">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="tel">Phone</label>
+					    <div class="input-controls">
+					      <input id="tel" placeholder="telephone Number">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="email">Email</label>
+					    <div class="input-controls">
+					      <input id="email" placeholder="Email">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <div class="input-controls">
+					      <button class="btn" id="add">Add</button>
+					    </div>
+					  </div>
+					</form>
+				</div>
+			</header>
+		</div>		
+	</body>
+	
+	<script src="scripts/vendor/backbone.min.js"> </script>	
+	<script src="scripts/app.js"></script>
+</html>
