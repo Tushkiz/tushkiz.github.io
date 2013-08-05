@@ -41,9 +41,9 @@
 
 		// events
 		events: {
-            "click li.delete a": "deleteContact",
-            "click li.edit a": "editContact",
-            "click li.hide a": "hideContact",
+            "click a.delete": "deleteContact",
+            "click a.edit": "editContact",
+            "click a.hide": "hideContact",
             "change select.type": "addType",
             "click button.save": "saveEdits",
             "click button.cancel": "cancelEdit"
@@ -63,8 +63,9 @@
 
 		editContact: function () {
 		    this.$el.html(this.editTemplate(this.model.toJSON()));
-		    $('.modal-overlay').fadeIn();
-		    $('.modal').slideDown();
+		    $('.modal-overlay').fadeIn("fast", function() {
+		    	$('.modal').slideDown();
+		    });
 		    var newOpt = $("<option/>", {
 		        html: "<em>Add new...</em>",
 		        value: "addType"   
@@ -132,8 +133,12 @@
 		},
 
 		cancelEdit: function() {
-
-			this.render();
+			var self = this;
+			$('.modal').slideUp(function() {
+			  $('.modal-overlay').fadeOut("fast", function() {
+			  	self.render();
+			  });
+			});
 		}		
 	});
 
