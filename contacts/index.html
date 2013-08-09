@@ -32,40 +32,34 @@
 		<div class="modal">
 		<form class="form-horizontal" id="editContact">
 	  
-				<div class="control-group">
-			    <label class="control-label" for="photo">Photo</label>
-			    <div class="input-controls">
-			      <input type="file" id="photo" value="<%= photo %>" placeholder="photo">
-			    </div>
-				</div>
 			  <div class="control-group">
 			    <label class="control-label" for="name">Name</label>
 			    <div class="input-controls">
-			      <input id="name" value="<%= name %>" placeholder="name">
+			      <input class="name" value="<%= name %>" placeholder="name">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label" for="type">Type</label>
 			    <div id="typeControl" class="input-controls">
-			      <input id="type" type="hidden" value="<%= type %>"placeholder="type">
+			      <input class="type" type="hidden" value="<%= type %>"placeholder="type">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label" for="address">Address</label>
 			    <div class="input-controls">
-			      <input id="address" value="<%= address %>" placeholder="Address">
+			      <input class="address" value="<%= address %>" placeholder="Address">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label" for="tel">Phone</label>
 			    <div class="input-controls">
-			      <input id="tel" value="<%= tel %>" placeholder="telephone Number">
+			      <input class="tel" value="<%= tel %>" placeholder="telephone Number">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label" for="email">Email</label>
 			    <div class="input-controls">
-			      <input id="email" value="<%= email %>" placeholder="Email">
+			      <input class="email" value="<%= email %>" placeholder="Email">
 			    </div>
 			  </div>
 			  <div class="control-group">
@@ -92,12 +86,6 @@
 
 				<div class="form-container">
 					<form class="form-horizontal" id="addContact">
-					  <div class="control-group">
-					    <label class="control-label" for="photo">Photo</label>
-					    <div class="input-controls">
-					      <input type="file" id="photo" placeholder="photo">
-					    </div>
-					  </div>
 					  <div class="control-group">
 					    <label class="control-label" for="name">Name</label>
 					    <div class="input-controls">
@@ -131,6 +119,7 @@
 					  <div class="control-group">
 					    <div class="input-controls">
 					      <button class="btn" id="add">Add</button>
+					      <button class="btn" id="cancel">Cancel</button>
 					    </div>
 					  </div>
 					</form>
