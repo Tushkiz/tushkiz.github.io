@@ -154,7 +154,8 @@ nav ul li.gmail a 		{ background-position: 0px -160px; 	}
 nav ul li.dribbble a 	{ background-position: 0px -192px; 	}
 nav ul li.behance a 	{ background-position: 0px -224px; 	}
 nav ul li.zerply a 		{ background-position: 0px -256px; 	}
-nav ul li.rss a 		{ background-position: 0px -288px; 	}
+nav ul li.rss a 			{ background-position: 0px -288px; 	}
+nav ul li.codepen a 	{ background-position: 0px -320px; 	}
 
 nav ul li.twitter a	span	{ background: #00afe9; }
 nav ul li.facebook a span	{ background: #3b5998; }
@@ -165,7 +166,8 @@ nav ul li.gmail a span		{ background: #e04a3e; }
 nav ul li.dribbble a span	{ background: #eb4a8b; }
 nav ul li.behance a span	{ background: #5abceb; }
 nav ul li.zerply a span		{ background: #9dbc7a; }
-nav ul li.rss a span		{ background: #fa5500; }
+nav ul li.rss a span			{ background: #fa5500; }
+nav ul li.codepen a span	{ background: #444444; }
 
 nav ul li a span {
 	display: none;
