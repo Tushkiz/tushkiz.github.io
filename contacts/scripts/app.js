@@ -1,4 +1,4 @@
-(function(){
+(function () {
 	var contacts = [
 		{ name: "Tushar", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "tusharlsonawane@gmail.com", type: "family" },
     { name: "Shridhar", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "shridhar.deshmukh3@gmail.com", type: "college" },
@@ -67,7 +67,7 @@
 		editContact: function () {
 		    this.$el.html(this.editTemplate(this.model.toJSON()));
 		    $('.modal-overlay').fadeIn("fast", function() {
-		    	$('.modal').slideDown();
+		    	$('#editContact').slideDown();
 		    });
 		    var newOpt = $("<option/>", {
 		        html: "<em>Add new...</em>",
@@ -84,6 +84,7 @@
 
 		hideContact: function() {
 			this.$el.find(".info").toggleClass('hidden');
+			this.$el.find('.hide').toggleClass('show');
 		},
 
 		addType: function() {
@@ -125,7 +126,8 @@
       this.model.set(formData);
 
       //render view
-      this.render();
+      //this.render();
+      this.cancelEdit();
 
       //if model acquired default photo property, remove it
 			if(prev.photo === "http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=100") {
@@ -475,7 +477,10 @@
 		},
 
 		showForm: function () {
-    	this.$el.find("#addContact").slideToggle();
+			
+    	$('.modal-overlay').fadeToggle("fast", function() {
+		    	$('.modal').slideToggle();
+		    });
     }
 	});
 

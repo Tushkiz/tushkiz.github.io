@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+  <head>
 		<title>Contacts Manager</title>
 		
 		<!-- Scripts -->
@@ -29,8 +29,8 @@
 
 		<script id="contactEditTemplate" type="text/template">
 		<div class="modal-overlay"></div>
-		<div class="modal">
-		<form class="form-horizontal" id="editContact">
+		<div class="modal" id="editContact">
+		<form class="form-horizontal">
 	  
 			  <div class="control-group">
 			    <label class="control-label" for="name">Name</label>
@@ -82,10 +82,10 @@
 				<div class="filter"></div>
 				<input class="search" placeholder="Search"/>
 				<a class="btn" id="showForm" href="#">New</a>
-				
 
-				<div class="form-container">
-					<form class="form-horizontal" id="addContact">
+				<div class="modal-overlay"></div>
+				<div class="modal" id="addContact">
+					<form class="form-horizontal" >
 					  <div class="control-group">
 					    <label class="control-label" for="name">Name</label>
 					    <div class="input-controls">

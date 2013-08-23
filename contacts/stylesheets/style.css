@@ -200,6 +200,7 @@ padding: 15px 10px 0 0;
 }
 
 .controls li a.hide 	{ background-position: -72px 4px; }
+.controls li a.show 	{ background-position: -96px 4px; }
 .controls li a.edit 	{ background-position: -120px 4px; }
 .controls li a.delete { background-position: -144px 4px; }
 
@@ -231,13 +232,6 @@ input {
   border: 0;
   font-size: 16px;
   border-radius: 3px;
-}
-
-#addContact {
-padding-top: 30px;
-font-size: 16px;
-width: 500px;
-display: none;
 }
 
 .form-horizontal .control-group {
