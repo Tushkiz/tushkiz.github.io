@@ -135,7 +135,7 @@ app.AppView = Backbone.View.extend({
     app.remainingTiles = app.numOfTiles = rndNum * 2;
 
     // Get data from words.json
-    $.getJSON('/game/js/words.json', function(json) {
+    $.getJSON('/game/js/test.json', function(json) {
       for (var i = 0; i < rndNum; i++) {
         // preload images
         self.preloadImage(json.data[i].image);
