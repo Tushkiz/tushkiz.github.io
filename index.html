@@ -52,7 +52,7 @@
             </li>
 
             <li class="linkedin">
-              <a href="http://www.linkedin.com/in/tushar47" target="_blank"><span>LinkedIn</span></a>
+              <a href="http://www.linkedin.com/in/tushkiz" target="_blank"><span>LinkedIn</span></a>
             </li>
 
             <li class="gmail">
@@ -83,13 +83,12 @@
 
           <section id="skills">
           <h2>Nerdy SKILLS</h2>
-          <progress value="85" max="100"></progress><span>JavaScript/jQuery</span>
-          <progress value="80" max="100"></progress><span>BackboneJS/AngularJS</span>
-          <progress value="60" max="100"></progress><span>NodeJS</span>
-          <progress value="70" max="100"></progress><span>HTML5/CSS3</span>
-          <progress value="60" max="100"></progress><span>Java/PHP</span>
-          <progress value="60" max="100"></progress><span>MySQL</span>
-          <progress value="80" max="100"></progress><span>Photoshop</span>
+          <progress value="0" data-ratings="85" max="100"></progress><span>JavaScript | jQuery | BackboneJS | NodeJS</span>
+          <progress value="0" data-ratings="82" max="100"></progress><span>Git | Linux | Networking</span>
+          <progress value="0" data-ratings="70" max="100"></progress><span>HTML5 | CSS3</span>
+          <progress value="0" data-ratings="65" max="100"></progress><span>Java | PHP</span>
+          <progress value="0" data-ratings="60" max="100"></progress><span>MySQL | Oracle</span>
+          <progress value="0" data-ratings="75" max="100"></progress><span>Photoshop</span>
           </section>
 
           <section id="work">
@@ -144,8 +143,8 @@
   <script type="text/javascript">
     $(function() {
       $('progress').each(function() {
-        var max = $(this).val();
-        $(this).val(0).animate({ value: max }, { duration: 2000 });
+        var max = $(this).data('ratings');
+        $(this).animate({ value: max }, { duration: 2000 });
       });
     });
   </script>
